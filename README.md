@@ -1,90 +1,207 @@
-# Next + Netlify Starter
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/46648482-644c-4c80-bafb-872057e51b6b/deploy-status)](https://app.netlify.com/sites/next-dev-starter/deploys)
-
-This is a [Next.js](https://nextjs.org/) v12 project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and set up to be instantly deployed to [Netlify](https://url.netlify.com/SyTBPVamO)!
-
-This project is a very minimal starter that includes 2 sample components, a global stylesheet, a `netlify.toml` for deployment, and a `jsconfig.json` for setting up absolute imports and aliases. With Netlify, you'll have access to features like Preview Mode, server-side rendering/incremental static regeneration via Netlify Functions, and internationalized routing on deploy automatically.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
-
-(If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
-
-## Table of Contents:
-
-- [Getting Started](#getting-started)
-- [Installation options](#installation-options)
-- [Testing](#testing)
-  - [Included Default Testing](#included-default-testing)
-  - [Removing Renovate](#removing-renovate)
-  - [Removing Cypress](#removing-cypress)
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-### Installation options
-
-**Option one:** One-click deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
-
-**Option two:** Manual clone
-
-1. Clone this repo: `git clone https://github.com/netlify-templates/next-netlify-starter.git`
-2. Navigate to the directory and run `npm install`
-3. Run `npm run dev`
-4. Make your changes
-5. Connect to [Netlify](https://url.netlify.com/Bk4UicocL) manually (the `netlify.toml` file is the one you'll need to make sure stays intact to make sure the export is done and pointed to the right stuff)
-
-## Testing
-
-### Included Default Testing
-
-We’ve included some tooling that helps us maintain these templates. This template currently uses:
-
-- [Renovate](https://www.mend.io/free-developer-tools/renovate/) - to regularly update our dependencies
-- [Cypress](https://www.cypress.io/) - to run tests against how the template runs in the browser
-- [Cypress Netlify Build Plugin](https://github.com/cypress-io/netlify-plugin-cypress) - to run our tests during our build process
-
-If your team is not interested in this tooling, you can remove them with ease!
-
-### Removing Renovate
-
-In order to keep our project up-to-date with dependencies we use a tool called [Renovate](https://github.com/marketplace/renovate). If you’re not interested in this tooling, delete the `renovate.json` file and commit that onto your main branch.
-
-### Removing Cypress
-
-For our testing, we use [Cypress](https://www.cypress.io/) for end-to-end testing. This makes sure that we can validate that our templates are rendering and displaying as we’d expect. By default, we have Cypress not generate deploy links if our tests don’t pass. If you’d like to keep Cypress and still generate the deploy links, go into your `netlify.toml` and delete the plugin configuration lines:
-
-```diff
-[[plugins]]
-  package = "netlify-plugin-cypress"
--  [plugins.inputs.postBuild]
--    enable = true
--
--  [plugins.inputs]
--    enable = false 
-```
-
-If you’d like to remove the `netlify-plugin-cypress` build plugin entirely, you’d need to delete the entire block above instead. And then make sure sure to remove the package from the dependencies using:
-
-```bash
-npm uninstall -D netlify-plugin-cypress
-```
-
-And lastly if you’d like to remove Cypress entirely, delete the entire `cypress` folder and the `cypress.config.ts` file. Then remove the dependency using:
-
-```bash
-npm uninstall -S cypress
-```
+!---------- Meta HTML Starts --------->
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Home</title>
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+<!---------- Meta HTML Ends --------->/********** <!---------- Main Menu HTML Starts --------->
+<nav>
+   <div class="container"> 
+      <a href="#">Home</a> 
+      <a href="#">About us</a> 
+      <a href="#">Admission</a> 
+      <a href="#">Gallery</a> 
+      <a href="#">Notice Board</a> 
+      <a href="#">Events</a> 
+      <a href="#">Tutorial</a> 
+      <a href="#">Contact us</a> 
+   </div>
+</nav>
+<!---------- Main Menu HTML Ends ---------><!---------- Slider HTML Starts --------->
+<div class="slider">
+<img src="images/slider.jpg">
+</div>
+<!---------- Slider HTML Ends --------->/<!---------- News, Event, Notice Board HTML Starts --------->
+<div class="container">
+<div class="main-section">
+   <!---------- News Section --------->
+   <div class="event">
+      <h2 class="heading">Campus News</h2>
+      <div>
+         <marquee direction="up" scrollamount="7" style="height:400px;">
+            <ul>
+               <li><img src="images/new.gif"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+               <li><img src="images/new.gif"> Desktop publishing software like Aldus PageMaker including versions Lorem Ipsum</li>
+               <li><img src="images/new.gif"> Many desktop publishing packages and web page editors now use</li>
+               <li><img src="images/new.gif"> Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</li>
+               <li><img src="images/new.gif"> Welcome To The Best Private University in MP</li>
+               <li><img src="images/new.gif"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+               <li><img src="images/new.gif"> Desktop publishing software like Aldus PageMaker including versions of Ipsum</li>
+            </ul>
+         </marquee>
+      </div>
+   </div>
+   <!---------- Event Section --------->
+   <div class="event">
+      <h2 class="heading">Events</h2>
+      <div>
+         <marquee direction="up" scrollamount="7" style="height:400px;">
+            <ul>
+               <li><img src="images/new.gif"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+               <li><img src="images/new.gif"> Desktop publishing software like Aldus PageMaker including versions Lorem Ipsum</li>
+               <li><img src="images/new.gif"> Many desktop publishing packages and web page editors now use</li>
+               <li><img src="images/new.gif"> Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</li>
+               <li><img src="images/new.gif"> Welcome To The Best Private University in MP</li>
+               <li><img src="images/new.gif"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+               <li><img src="images/new.gif"> Desktop publishing software like Aldus PageMaker including versions of Ipsum</li>
+            </ul>
+         </marquee>
+      </div>
+   </div>
+   <!---------- Notice Board Section --------->
+   <div class="event">
+      <h2 class="heading">Notice Boards</h2>
+      <div>
+         <marquee direction="up" scrollamount="7" style="height:400px;">
+            <ul>
+               <li><img src="images/new.gif"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+               <li><img src="images/new.gif"> Desktop publishing software like Aldus PageMaker including of Lorem Ipsum</li>
+               <li><img src="images/new.gif"> Many desktop publishing packages and web page editors now use</li>
+               <li><img src="images/new.gif"> Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</li>
+               <li><img src="images/new.gif"> Welcome To The Best Private University in MP</li>
+               <li><img src="images/new.gif"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+               <li><img src="images/new.gif"> Desktop publishing software like Aldus PageMaker including versions of Ipsum</li>
+            </ul>
+         </marquee>
+      </div>
+   </div>
+</div>
+<!---------- News, Event, Notice Board HTML Ends ---------> <!---------- About Us HTML Starts --------->
+<div class="main-section about-us">
+   <img src="images/principal.jpg" >
+   <div>
+      <h2 class="heading">About Our Chairman</h2>
+      <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+      <img src="images/sign.png">
+   </div>
+</div>
+<!---------- About Us HTML Ends --------->/
+.about-<!---------- Testimonial HTML Starts --------->
+<div class="main-section">
+   <h2 class="heading">What Student Say's About Courses</h2>
+   <marquee scrollamount="7">
+      <div class="testimonial">
+         <div class="testimonial-text"> Contrary to popular belief, Lorem Ipsum is not simply <br>
+            It has roots in a piece of classical Latin literature <br>
+            from 45 BC, making it over 2000 years old. Richard ,<br>
+            a Latin professor at Hampden-Sydney College in look. 
+         </div>
+         <div class="testimonial-detail">
+            <div class="testimonial-img"> <img src="images/testimonial-1.jpg"> </div>
+            <div class="testimonial-name">
+               <h5>Niccky</h5>
+               <p>Web Devloper</p>
+            </div>
+         </div>
+      </div>
+      <div class="testimonial">
+         <div class="testimonial-text"> Contrary to popular belief, Lorem Ipsum is not simply <br>
+            It has roots in a piece of classical Latin literature <br>
+            from 45 BC, making it over 2000 years old.  McClintock,<br>
+            a Latin professor at Hampden-Sydney College in look. 
+         </div>
+         <div class="testimonial-detail">
+            <div class="testimonial-img"> <img src="images/testimonial-2.jpg"> </div>
+            <div class="testimonial-name">
+               <h5>Richa</h5>
+               <p>Web Devloper</p>
+            </div>
+         </div>
+      </div>
+      <div class="testimonial">
+         <div class="testimonial-text"> Contrary to popular belief, Lorem Ipsum is not simply <br>
+            It has roots in a piece of classical Latin literature <br>
+            from 45 BC, making it over 2000 years old.  McClintock,<br>
+            a Latin professor at Hampden-Sydney College in  look. 
+         </div>
+         <div class="testimonial-detail">
+            <div class="testimonial-img"> <img src="images/testimonial-3.jpg"> </div>
+            <div class="testimonial-name">
+               <h5>Jiya</h5>
+               <p>Web Devloper</p>
+            </div>
+         </div>
+      </div>
+   </marquee>
+</div>
+<!---------- Testimonial HTML Ends ---------><!---------- Gallery HTML Starts --------->
+<div class="main-section gallery">
+   <h2 class="heading">Gallery</h2>
+   <img src="images/gallery-1.jpg"> 
+   <img src="images/gallery-2.jpg"> 
+   <img src="images/gallery-3.jpg"> 
+   <img src="images/gallery-4.jpg"> 
+   <img src="images/gallery-5.jpg"> 
+   <img src="images/gallery-6.jpg"> 
+   <img src="images/gallery-7.jpg"> 
+   <img src="images/gallery-8.jpg"> 
+</div>
+<!---------- Gallery HTML Ends ---------><!---------- Placement HTML Starts --------->
+<div class="main-section">
+   <h2 class="heading">Placement</h2>
+   <marquee class="placement" direction="left" scrollamount="10">
+      <img src="images/company-1.jpg"> 
+      <img src="images/company-2.jpg"> 
+      <img src="images/company-3.jpg"> 
+      <img src="images/company-4.jpg"> 
+      <img src="images/company-5.jpg"> 
+      <img src="images/company-6.jpg"> 
+      <img src="images/company-7.jpg"> 
+      <img src="images/company-8.jpg"> 
+      <img src="images/company-9.jpg"> 
+      <img src="images/company-10.jpg"> 
+      <img src="images/company-11.jpg"> 
+      <img src="images/company-12.jpg">
+   </marquee>
+</div>
+</div>
+<!---------- Placement HTML Ends ---------><!---------- Footer HTML Starts --------->
+<div class="footer">
+   <div class="container">
+      <div class="footer-sect">
+         <h2>Best Institute For Education</h2>
+         <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock.</p>
+         <img src="images/icon-fb.png"> 
+         <img src="images/icon-tw.png"> 
+         <img src="images/icon-in.png"> 
+         <img src="images/icon-li.png"> 
+      </div>
+      <div class="footer-sect">
+         <h2>Quick Links</h2>
+         <ul class="footer-menu">
+            <li><a href="#"> > Home</a></li>
+            <li><a href="#"> > About us</a></li>
+            <li><a href="#"> > Tutorial</a></li>
+            <li><a href="#"> > Event</a></li>
+            <li><a href="#"> > Gallery</a></li>
+            <li><a href="#"> > Press Release</a></li>
+            <li><a href="#"> > Courses</a></li>
+            <li><a href="#"> > Contact Us</a></li>
+         </ul>
+      </div>
+      <div class="footer-sect">
+         <h2>Contact Info</h2>
+         <ul class="footer-contact">
+            <li><b>Email :</b> reply@bestinstituteeducation.com </li>
+            <li><b>Call :</b> +91 -123 456 7890 </li>
+            <li><b>Fax :</b> +91 -123 4567890 </li>
+            <li><b>Website :</b> https://www.dezven.com </li>
+         </ul>
+      </div>
+   </div>
+</div>
+</body>
+</html>
+<!---------- Footer HTML Ends --------->
